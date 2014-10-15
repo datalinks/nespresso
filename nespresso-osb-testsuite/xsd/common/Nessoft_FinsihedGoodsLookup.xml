@@ -1,0 +1,10 @@
+<nes:Lookup_Request xmlns:nes="http://schemas.nespresso.com/phenix/common/NesSoftLookup">
+  <nes:UoM_Lookup>
+    <nes:Product>
+      <nes:Product_ID_Type>INTNL</nes:Product_ID_Type>
+      <nes:Product_ID>7810.10</nes:Product_ID>
+      <nes:Source_UoM>5</nes:Source_UoM>
+      <nes:Quantity Type="Source">3520</nes:Quantity>
+    </nes:Product>
+  </nes:UoM_Lookup>
+</nes:Lookup_Request>

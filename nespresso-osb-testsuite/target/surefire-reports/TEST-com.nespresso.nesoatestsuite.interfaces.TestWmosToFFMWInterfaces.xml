@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.016" errors="4" skipped="0" tests="4" name="com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="Test" value="TestProdDeclReversalInterfaces"/>
+    <property name="sun.boot.library.path" value="C:\wipro\apps\Java\jdk1.6.0_24\jre\bin"/>
+    <property name="java.vm.version" value="19.1-b02"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 2"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\wipro\workspaces\praveen\NesOATestSuite"/>
+    <property name="java.runtime.version" value="1.6.0_24-b07"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="basedir" value="C:\wipro\workspaces\praveen\NesOATestSuite"/>
+    <property name="java.endorsed.dirs" value="C:\wipro\apps\Java\jdk1.6.0_24\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="surefire.real.class.path" value="C:\wipro\workspaces\praveen\NesOATestSuite\target\surefire\surefirebooter8601743165049426326.jar"/>
+    <property name="java.io.tmpdir" value="C:\Users\apkumar\AppData\Local\Temp\8\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows Server 2008"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\wipro\apps\Java\jdk1.6.0_24\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\wipro\apps\Java\jdk1.6.0_24\bin;C:\Program Files\TortoiseSVN\bin;C:\wipro\apps\apache-maven-3.0.3\bin"/>
+    <property name="surefire.test.class.path" value="C:\wipro\workspaces\praveen\NesOATestSuite\target\test-classes;C:\wipro\workspaces\praveen\NesOATestSuite\target\classes;C:\praveen\Maven\xmlunit\xmlunit\1.3\xmlunit-1.3.jar;C:\praveen\Maven\junit\junit\4.7\junit-4.7.jar;C:\praveen\Maven\org\apache\httpcomponents\httpclient\4.1.2\httpclient-4.1.2.jar;C:\praveen\Maven\org\apache\httpcomponents\httpcore\4.1.2\httpcore-4.1.2.jar;C:\praveen\Maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\praveen\Maven\commons-codec\commons-codec\1.4\commons-codec-1.4.jar;C:\praveen\Maven\org\apache\commons\commons-net\3.0.1\commons-net-3.0.1.jar;C:\praveen\Maven\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\praveen\Maven\xmlbeans\xmlbeans\1.0\xmlbeans-1.0.jar;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler"/>
+    <property name="os.version" value="6.0"/>
+    <property name="user.home" value="C:\Users\apkumar"/>
+    <property name="user.timezone" value="Europe/Berlin"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="apkumar"/>
+    <property name="java.class.path" value="C:\wipro\workspaces\praveen\NesOATestSuite\target\test-classes;C:\wipro\workspaces\praveen\NesOATestSuite\target\classes;C:\praveen\Maven\xmlunit\xmlunit\1.3\xmlunit-1.3.jar;C:\praveen\Maven\junit\junit\4.7\junit-4.7.jar;C:\praveen\Maven\org\apache\httpcomponents\httpclient\4.1.2\httpclient-4.1.2.jar;C:\praveen\Maven\org\apache\httpcomponents\httpcore\4.1.2\httpcore-4.1.2.jar;C:\praveen\Maven\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\praveen\Maven\commons-codec\commons-codec\1.4\commons-codec-1.4.jar;C:\praveen\Maven\org\apache\commons\commons-net\3.0.1\commons-net-3.0.1.jar;C:\praveen\Maven\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\praveen\Maven\xmlbeans\xmlbeans\1.0\xmlbeans-1.0.jar;"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\wipro\apps\Java\jdk1.6.0_24\jre"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_24"/>
+    <property name="java.ext.dirs" value="C:\wipro\apps\Java\jdk1.6.0_24\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\wipro\apps\Java\jdk1.6.0_24\jre\lib\resources.jar;C:\wipro\apps\Java\jdk1.6.0_24\jre\lib\rt.jar;C:\wipro\apps\Java\jdk1.6.0_24\jre\lib\sunrsasign.jar;C:\wipro\apps\Java\jdk1.6.0_24\jre\lib\jsse.jar;C:\wipro\apps\Java\jdk1.6.0_24\jre\lib\jce.jar;C:\wipro\apps\Java\jdk1.6.0_24\jre\lib\charsets.jar;C:\wipro\apps\Java\jdk1.6.0_24\jre\lib\modules\jdk.boot.jar;C:\wipro\apps\Java\jdk1.6.0_24\jre\classes"/>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="localRepository" value="C:\praveen\Maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase time="0" classname="com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces" name="testPackMateReqCancConfOutputValidSchema">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.nespresso.nesoatestsuite.utils.FFMWNesoaClient.getOrderedFFMWFileList(FFMWNesoaClient.java:28)
+	at com.nespresso.nesoatestsuite.utils.FFMWNesoaClient.&lt;init&gt;(FFMWNesoaClient.java:18)
+	at com.nespresso.nesoatestsuite.OsbTester.getTimeStampLastFileFromFFMW(OsbTester.java:115)
+	at com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces.testPackMateReqCancConfOutputValidSchema(TestWmosToFFMWInterfaces.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</error>
+    <system-out>@SLTests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 90.559 sec
+@SLRunning com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces
+</system-out>
+  </testcase>
+  <testcase time="0.016" classname="com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces" name="testPackMateReqCancConfXPathOutput">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at java.io.StringReader.&lt;init&gt;(StringReader.java:33)
+	at org.custommonkey.xmlunit.XMLUnit.buildControlDocument(XMLUnit.java:317)
+	at com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces.testPackMateReqCancConfXPathOutput(TestWmosToFFMWInterfaces.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</error>
+  </testcase>
+  <testcase time="0" classname="com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces" name="testPackMateReqOrdStatOutputValidSchema">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.nespresso.nesoatestsuite.utils.FFMWNesoaClient.getOrderedFFMWFileList(FFMWNesoaClient.java:28)
+	at com.nespresso.nesoatestsuite.utils.FFMWNesoaClient.&lt;init&gt;(FFMWNesoaClient.java:18)
+	at com.nespresso.nesoatestsuite.OsbTester.getTimeStampLastFileFromFFMW(OsbTester.java:115)
+	at com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces.testPackMateReqOrdStatOutputValidSchema(TestWmosToFFMWInterfaces.java:129)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</error>
+  </testcase>
+  <testcase time="0" classname="com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces" name="testPackMateReqOrdStatXPathOutput">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at java.io.StringReader.&lt;init&gt;(StringReader.java:33)
+	at org.custommonkey.xmlunit.XMLUnit.buildControlDocument(XMLUnit.java:317)
+	at com.nespresso.nesoatestsuite.interfaces.TestWmosToFFMWInterfaces.testPackMateReqOrdStatXPathOutput(TestWmosToFFMWInterfaces.java:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</error>
+  </testcase>
+</testsuite>

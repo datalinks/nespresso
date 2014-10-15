@@ -1,0 +1,8 @@
+<nes:Lookup_Request xmlns:nes="http://schemas.nespresso.com/phenix/common/NesSoftLookup">
+  <nes:Material_Lookup>
+    <nes:Material>
+      <nes:Material_ID_Type_Code>GLOBE</nes:Material_ID_Type_Code>
+      <nes:Material_ID>6781010</nes:Material_ID>
+    </nes:Material>
+  </nes:Material_Lookup>
+</nes:Lookup_Request>

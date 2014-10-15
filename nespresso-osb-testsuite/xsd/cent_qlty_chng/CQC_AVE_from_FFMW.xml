@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MaterialInformation>
+	<ID>0000000051093090</ID>
+	<Location>
+		<EquipmentID>0983</EquipmentID>
+		<EquipmentElementLevel>Site</EquipmentElementLevel>
+	</Location>
+	<PublishedDate>2011-11-25T00:00:00</PublishedDate>
+	<MaterialLot>
+		<ID>1250098305</ID>
+		<MaterialDefinitionID>000000000006743110</MaterialDefinitionID>
+		<globe_BatchRestrictedStatus>X</globe_BatchRestrictedStatus>
+	</MaterialLot>
+</MaterialInformation>

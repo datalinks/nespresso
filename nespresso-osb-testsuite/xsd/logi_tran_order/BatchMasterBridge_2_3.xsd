@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="BatchMasterBridge">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="BatchMaster" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BatchNbr" minOccurs="1" type="xs:string"/>
+							<xs:element name="SKUDefinition" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Company" minOccurs="0" type="xs:string"/>
+										<xs:element name="Division" minOccurs="0" type="xs:string"/>
+										<xs:element name="Season" minOccurs="0" type="xs:string"/>
+										<xs:element name="SeasonYear" minOccurs="0" type="xs:string"/>
+										<xs:element name="Style" minOccurs="0" type="xs:string"/>
+										<xs:element name="StyleSuffix" minOccurs="0" type="xs:string"/>
+										<xs:element name="Color" minOccurs="0" type="xs:string"/>
+										<xs:element name="ColorSuffix" minOccurs="0" type="xs:string"/>
+										<xs:element name="SecDimension" minOccurs="0" type="xs:string"/>
+										<xs:element name="Quality" minOccurs="0" type="xs:string"/>
+										<xs:element name="SizeRangeCode" minOccurs="0" type="xs:string"/>
+										<xs:element name="SizeRelPosninTable" minOccurs="0" type="xs:string"/>
+										<xs:element name="SizeDesc" minOccurs="1">
+<xs:simpleType><xs:restriction base="xs:string">
+														      <xs:maxLength value="15"/>
+														    </xs:restriction>
+														</xs:simpleType> 
+													</xs:element>
+										<xs:element name="SkuID" minOccurs="0" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BatchMasterFields" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ReceivedDate" minOccurs="0" type="xs:dateTime"/>
+										<xs:element name="ExpireDate" minOccurs="0" type="xs:dateTime"/>
+										<xs:element name="ExpireFlag" minOccurs="0" type="xs:string"/>
+										<xs:element name="MfgRecallDate" minOccurs="0" type="xs:dateTime"/>
+										<xs:element name="MfgRecall" minOccurs="0" type="xs:string"/>
+										<xs:element name="DefCaseLCHeld" minOccurs="0" type="xs:string"/>
+										<xs:element name="DefCaseLCExp" minOccurs="0" type="xs:string"/>
+										<xs:element name="DefPickLCHeld" minOccurs="0" type="xs:string"/>
+										<xs:element name="DefPickLCExp" minOccurs="0" type="xs:string"/>
+										<xs:element name="AuthNbr" minOccurs="0" type="xs:string"/>
+										<xs:element name="TransInvType" minOccurs="0" type="xs:string"/>
+										<xs:element name="VendorID" minOccurs="0" type="xs:string"/>
+										<xs:element name="VendorBatch" minOccurs="0" type="xs:string"/>
+										<xs:element name="SplInstr1" minOccurs="0" type="xs:string"/>
+										<xs:element name="SplInstr2" minOccurs="0" type="xs:string"/>
+									     <xs:element name="MiscField1" minOccurs="0">
+<xs:simpleType><xs:restriction base="xs:string">
+														      <xs:maxLength value="20"/>
+														    </xs:restriction>
+														</xs:simpleType> 
+													</xs:element>	
+										<xs:element name="MiscField2" minOccurs="0">
+<xs:simpleType><xs:restriction base="xs:string">
+														      <xs:maxLength value="20"/>
+														    </xs:restriction>
+														</xs:simpleType> 
+													</xs:element>
+										<xs:element name="MiscNumeric1" minOccurs="0" type="xs:decimal"/>
+										<xs:element name="MiscNumeric2" minOccurs="0" type="xs:decimal"/>
+										<xs:element name="RecordExpansionField" minOccurs="0" type="xs:string"/>
+										<xs:element name="CustomRecExpansionField" minOccurs="0" type="xs:string"/>
+										<xs:element name="StatusCode" minOccurs="0" type="xs:string"/>
+										<xs:element name="Function" minOccurs="0" type="xs:string"/>
+										<xs:element name="LkCdHld" minOccurs="0" type="xs:string"/>
+										<xs:element name="LkCdExp" minOccurs="0" type="xs:string"/>
+										<xs:element name="DateCreated" minOccurs="0" type="xs:dateTime"/>
+										<xs:element name="PackingLocation" minOccurs="0" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Error" minOccurs="0" type="xs:string"/>
+							<xs:element name="BatchCtlNbr" minOccurs="0" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" use="optional" type="xs:string"/>
+			<xs:attribute name="version" use="optional" type="xs:string" default="2.3"/>
+			<xs:attribute name="timestamp" use="optional" type="xs:dateTime"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

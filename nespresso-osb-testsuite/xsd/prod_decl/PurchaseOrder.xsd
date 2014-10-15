@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="PONbr" type="xs:string"/>
+	<xs:element name="Error" type="xs:string"/>
+	<xs:element name="ManufacturingPlant" type="xs:string"/>
+	<xs:element name="CasesShipped" type="xs:integer" fixed="0"/>
+	<xs:element name="Reference1" type="xs:string"/>
+	<xs:element name="Reference2" type="xs:string"/>
+	<xs:element name="Reference3" type="xs:string"/>
+	<xs:element name="PurchaseOrderBridge">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PurchaseOrder" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="PONbr"/>
+							<xs:element name="ToLocation">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="3PL"/>
+										<xs:enumeration value="EA"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BatchCtlNbr" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:maxLength value="10"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="POHeaderFields">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Company" type="xs:string" fixed="001"/>
+										<xs:element name="Division">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:length value="3"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="ReceivedFrom" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>GLN of supplier</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="SchedStartRcvDate" type="xs:dateTime" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>First of order lines' expected del date</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element ref="Reference1" minOccurs="0"/>
+										<xs:element name="RepresentativeName" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Order comments (TEXT)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element ref="CasesShipped" minOccurs="0"/>
+										<xs:element name="UnitsOrdered" type="xs:decimal" fixed="0" minOccurs="0"/>
+										<xs:element name="TotalWeight" type="xs:decimal" fixed="0" minOccurs="0"/>
+										<xs:element name="StatusCode">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="00"/>
+													<xs:enumeration value="11"/>
+													<xs:enumeration value="90"/>
+													<xs:enumeration value="99"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="PONbr" type="xs:dateTime" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="ListOfPODetails" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="PODetail" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SKUDefinition">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Company" type="xs:string" fixed="001"/>
+																<xs:element name="Division">
+																	<xs:simpleType>
+																		<xs:restriction base="xs:string">
+																			<xs:length value="3"/>
+																		</xs:restriction>
+																	</xs:simpleType>
+																</xs:element>
+																<xs:element name="SizeDesc" type="xs:string">
+																	<xs:annotation>
+																		<xs:documentation>International Code</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="SequenceNbr" type="xs:integer"/>
+													<xs:element name="SubSKUFields">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="InventoryType" type="xs:string" minOccurs="0"/>
+																<xs:element name="BatchNumber" type="xs:string" fixed="*"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element ref="PONbr"/>
+													<xs:element name="PODetailFields" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element ref="CasesShipped"/>
+																<xs:element name="StdCaseQuantity" type="xs:decimal" fixed="0"/>
+																<xs:element name="VendorTier" type="xs:integer" fixed="0"/>
+																<xs:element name="VendorHeight" type="xs:integer" fixed="0"/>
+																<xs:element name="ProcessImmdNeeds" type="xs:string" minOccurs="0"/>
+																<xs:element name="StandardSubPackQty" type="xs:decimal" fixed="0"/>
+																<xs:element name="StandardPackQty" type="xs:decimal" fixed="0"/>
+																<xs:element name="UnitsOrdered" type="xs:decimal"/>
+																<xs:element name="QcHoldUponReceipt" type="xs:string" minOccurs="0"/>
+																<xs:element name="ShipByDate" type="xs:dateTime" minOccurs="0"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="optional"/>
+			<xs:attribute name="version" type="xs:string" use="optional" default="2.3.1"/>
+			<xs:attribute name="timestamp" type="xs:dateTime" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

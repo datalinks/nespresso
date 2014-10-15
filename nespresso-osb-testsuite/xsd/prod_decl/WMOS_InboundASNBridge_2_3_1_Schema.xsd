@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="ShipmentNbr" >
+	<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="20" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Error" type="xsd:string" />
+	<xsd:element name="ReceivedFrom" type="xsd:string" />
+	<xsd:element name="ManifestNbr" type="xsd:string" />
+	<xsd:element name="ManifestType" type="xsd:string" />
+	<xsd:element name="PONbr">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="20" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="ShipVia" type="xsd:string" />
+	<xsd:element name="TrailerNumber" type="xsd:string" />
+	<xsd:element name="WorkOrderNbr" type="xsd:string" />
+	<xsd:element name="CutNbr" type="xsd:string" />
+	<xsd:element name="ManufacturingPlant" type="xsd:string" />
+	<xsd:element name="ShipmentPriority" type="xsd:string" />
+	<xsd:element name="PathNbr" type="xsd:string" />
+	<xsd:element name="DcOrderNbr" type="xsd:string" />
+	<xsd:element name="WhseTransferFlag" type="xsd:string" />
+	<xsd:element name="CaseDivertCode" type="xsd:string" />
+	<xsd:element name="CasesShipped" type="xsd:integer" />
+	<xsd:element name="Reference1" type="xsd:string" />
+	<xsd:element name="Reference2" type="xsd:string" />
+	<xsd:element name="Reference3" type="xsd:string" />
+	<xsd:element name="StatusCode">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="2" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Misc20ByteField1" type="xsd:string" />
+	<xsd:element name="Misc20ByteField2" type="xsd:string" />
+	<xsd:element name="MiscNumericField1" type="xsd:decimal" />
+	<xsd:element name="MiscNumericField2" type="xsd:decimal" />
+	<xsd:element name="RecordExpansionField" type="xsd:string" />
+	<xsd:element name="CustomRecExpansionField" type="xsd:string" />
+	<xsd:element name="Function" type="xsd:string" />
+	<xsd:element name="Volume" type="xsd:decimal" />
+	<xsd:element name="MiscAlphaField3" type="xsd:string" />
+	<xsd:element name="MiscAlphaField4" type="xsd:string" />
+	<xsd:element name="MiscNumericField3" type="xsd:decimal" />
+	<xsd:element name="QualityAuditPercent" type="xsd:integer" />
+	<xsd:element name="MiscNumericField4" type="xsd:decimal" />
+	<xsd:element name="Company">
+							<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="10"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>
+	<xsd:element name="Division">
+	<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="10"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>
+	<xsd:element name="ExpireDate" type="xsd:dateTime" />
+	<xsd:element name="PutawayType" type="xsd:string" />
+	<xsd:element name="VendorID">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="13" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="ShipByDate" type="xsd:dateTime" />
+	<xsd:element name="StdCaseQuantity" type="xsd:decimal" />
+	<xsd:element name="ManufacturingDate" type="xsd:dateTime" />
+	<xsd:element name="ProcessImmdNeeds">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="1" />
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="PrePackGroupCode" type="xsd:string" />
+	<xsd:element name="InnerPackQty" type="xsd:decimal" />
+	<xsd:element name="EstimatedWeight" type="xsd:decimal" />
+	<xsd:element name="ActualWeight" type="xsd:decimal" />
+	<xsd:element name="CaseType" type="xsd:string" />
+	<xsd:element name="CaseSize" type="xsd:string" />
+	<xsd:element name="POLineNbr" type="xsd:integer" />
+	<xsd:element name="StatusDateTime" type="xsd:dateTime" />
+	<xsd:element name="ReceivedDate" type="xsd:dateTime" />
+	<xsd:element name="Warehouse">
+							<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="3"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>
+	<xsd:element name="PreviousArea" type="xsd:string" />
+	<xsd:element name="PreviousZone" type="xsd:string" />
+	<xsd:element name="PreviousAisle" type="xsd:string" />
+	<xsd:element name="PreviousBay" type="xsd:string" />
+	<xsd:element name="PreviousLevel" type="xsd:string" />
+	<xsd:element name="PreviousPosition" type="xsd:string" />
+	<xsd:element name="LocnCaseIndicator" type="xsd:string" />
+	<xsd:element name="ReworkCode" type="xsd:string" />
+	<xsd:element name="QualityHeldCode" type="xsd:string" />
+	<xsd:element name="SpecialInstrCode1" type="xsd:string" />
+	<xsd:element name="SpecialInstrCode2" type="xsd:string" />
+	<xsd:element name="SpecialInstrCode3" type="xsd:string" />
+	<xsd:element name="SpecialInstrCode4" type="xsd:string" />
+	<xsd:element name="SpecialInstrCode5" type="xsd:string" />
+	<xsd:element name="ReasonCode" type="xsd:string" />
+	<xsd:element name="CaseLabelType" type="xsd:string" />
+	<xsd:element name="TicketType" type="xsd:string" />
+	<xsd:element name="StandardPackQty" type="xsd:decimal" />
+	<xsd:element name="StandardSubPackQty" type="xsd:decimal" />
+	<xsd:element name="VendorItemNumber" type="xsd:string" />
+	<xsd:element name="ConditionCode" type="xsd:string" />
+	<xsd:element name="SKUDefinition">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Company" minOccurs="1">
+										<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="10"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>
+				<xsd:element name="Division" minOccurs="1">
+				<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="10"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>
+				<xsd:element name="Season" type="xsd:string" minOccurs="0" />
+				<xsd:element name="SeasonYear" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="Style" type="xsd:string" minOccurs="0" />
+				<xsd:element name="StyleSuffix" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="Color" type="xsd:string" minOccurs="0" />
+				<xsd:element name="ColorSuffix" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="SecDimension" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="Quality" type="xsd:string" minOccurs="0" />
+				<xsd:element name="SizeRangeCode" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="SizeRelPosninTable" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="SizeDesc" type="xsd:string"
+					minOccurs="1" />
+				<xsd:element name="SkuID" type="xsd:string" minOccurs="0" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="SubSKUFields">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="InventoryType" minOccurs="1">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="1" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="ProductStatus" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="BatchNumber" minOccurs="1">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="15" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="SKUAttribute1" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="SKUAttribute2" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="SKUAttribute3" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="SKUAttribute4" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="SKUAttribute5" type="xsd:string"
+					minOccurs="0" />
+				<xsd:element name="CountryOfOrigin" type="xsd:string"
+					minOccurs="0" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="AssortmentNbr" type="xsd:string" />
+	<xsd:element name="ConsumeCasePriority" type="xsd:string" />
+	<xsd:element name="ConsumePriorityDate" type="xsd:dateTime" />
+	<xsd:element name="PalletID" type="xsd:string" />
+	<xsd:element name="QcHoldUponReceipt" type="xsd:string" />
+	<xsd:element name="VendorASN" type="xsd:string" />
+	<xsd:element name="UnitsShipped" type="xsd:decimal" />
+	<xsd:element name="InboundASNBridge">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="InboundASN" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="ShipmentNbr" minOccurs="1" />
+							<xsd:element name="ToLocation" minOccurs="1">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:maxLength value="3" />
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:element>
+							<xsd:element name="AsnType" type="xsd:string"/>
+							<xsd:element name="BatchCtlNbr" type="xsd:string"
+								minOccurs="1" />
+							<xsd:element ref="Error" minOccurs="0" />
+							<xsd:element name="ASNHeaderFields" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element ref="ReceivedFrom" minOccurs="0" />
+										<xsd:element ref="ManifestNbr" minOccurs="0" />
+										<xsd:element ref="ManifestType" minOccurs="0" />
+										<xsd:element name="BillOfLading" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="ShipVia" minOccurs="0" />
+										<xsd:element ref="TrailerNumber" minOccurs="0" />
+										<xsd:element name="DockDoorTrailerType" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="WorkOrderNbr" minOccurs="0" />
+										<xsd:element ref="CutNbr" minOccurs="0" />
+										<xsd:element ref="ManufacturingPlant" minOccurs="0" />
+										<xsd:element name="VendorName" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="Address1" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="Address2" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="Address3" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="City" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="StateCode" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="Zip" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="TelephoneNumber" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="BuyerCode" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="RepresentativeName" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="ProNbr" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="ShipmentPriority" minOccurs="0" />
+										<xsd:element ref="PathNbr" minOccurs="0" />
+										<xsd:element name="NbrOfCases" type="xsd:integer"
+											minOccurs="0" />
+										<xsd:element name="NbrOfUnits" type="xsd:decimal"
+											minOccurs="0" />
+										<xsd:element name="CarrierCharge" type="xsd:decimal"
+											minOccurs="0" />
+										<xsd:element ref="DcOrderNbr" minOccurs="0" />
+										<xsd:element name="ContractorLocation" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="WhseTransferFlag" minOccurs="0" />
+										<xsd:element ref="QcHoldUponReceipt" minOccurs="0" />
+										<xsd:element ref="CasesShipped" minOccurs="0" />
+										<xsd:element ref="UnitsShipped" minOccurs="0" />
+										<xsd:element name="ShippedDate" type="xsd:dateTime"
+											minOccurs="1" />
+										<xsd:element name="SchedStartRcvDate" type="xsd:dateTime"
+											minOccurs="1" />
+										<xsd:element name="SchedEndRecvDate" type="xsd:dateTime"
+											minOccurs="0" />
+										<xsd:element name="TotalWeight" type="xsd:decimal"
+											minOccurs="0" />
+										<xsd:element name="DistroSequenceMethod" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="FlowthruAllocMethod" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="ReferenceCode1" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="Reference1" minOccurs="0" />
+										<xsd:element name="ReferenceCode2" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="Reference2" minOccurs="0" />
+										<xsd:element name="ReferenceCode3" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="Reference3" minOccurs="0" />
+										<xsd:element ref="StatusCode" minOccurs="1" />
+										<xsd:element name="OutSourceFlag" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="SystemCreated" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="MiscInstrCode1" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="MiscInstrCode2" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="Misc20ByteField1" minOccurs="0" />
+										<xsd:element ref="Misc20ByteField2" minOccurs="0" />
+										<xsd:element ref="MiscNumericField1" minOccurs="0" />
+										<xsd:element ref="MiscNumericField2" minOccurs="0" />
+										<xsd:element ref="MiscAlphaField3" minOccurs="0" />
+										<xsd:element ref="MiscAlphaField4" minOccurs="0" />
+										<xsd:element ref="RecordExpansionField" minOccurs="0" />
+										<xsd:element ref="CustomRecExpansionField"
+											minOccurs="0" />
+										<xsd:element ref="Function" minOccurs="0" />
+										<xsd:element name="TurnAroundTime" type="xsd:integer"
+											minOccurs="0" />
+										<xsd:element name="FirmApptIndicator" type="xsd:integer"
+											minOccurs="0" />
+										<xsd:element name="ScheduledAppt" minOccurs="1">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="1" />
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element ref="Volume" minOccurs="0" />
+										<xsd:element name="ASNOriginalType" minOccurs="1">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="1" />
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="ASNDetailType" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="MiscNumericField3" minOccurs="0" />
+										<xsd:element name="ShipmentType" minOccurs="1">
+											<xsd:simpleType>
+												<xsd:restriction base="xsd:string">
+													<xsd:maxLength value="4" />
+												</xsd:restriction>
+											</xsd:simpleType>
+										</xsd:element>
+										<xsd:element name="ShipmentVehicleType" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="OrderNbr" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="OrderSfx" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="QualityAuditPercent" minOccurs="0" />
+										<xsd:element ref="VendorASN" minOccurs="0" />
+										<xsd:element name="SCACCode" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="SplInstr1" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="SplInstr2" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="SplInstr3" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="SplInstr4" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element ref="MiscNumericField4" minOccurs="0" />
+										<xsd:element name="SealNbr" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="StopSeq" type="xsd:integer"
+											minOccurs="0" />
+										<xsd:element name="TractorNbr" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="TractorSCAC" type="xsd:string"
+											minOccurs="0" />
+										<xsd:element name="NbrOfDtlLines" type="xsd:integer"
+											minOccurs="0" />
+										<xsd:element name="InboundLoadNbr" type="xsd:string"
+											minOccurs="0" />
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="ListOfASNDetails" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="ASNDetail" minOccurs="0"
+											maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element ref="SKUDefinition" minOccurs="0" />
+													<xsd:element name="SequenceNbr" type="xsd:integer"
+														minOccurs="1" />
+													<xsd:element ref="UnitsShipped" minOccurs="1" />
+													<xsd:element name="PurchasingUOM" type="xsd:string"
+														minOccurs="0" />
+													<xsd:element ref="SubSKUFields" minOccurs="0" />
+													<xsd:element ref="PONbr" minOccurs="1" />
+													<xsd:element ref="Error" minOccurs="0" />
+													<xsd:element name="ASNDetailFields" minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element ref="CasesShipped" minOccurs="1" />
+																<xsd:element ref="StdCaseQuantity"
+																	minOccurs="0" />
+																<xsd:element name="VendorTier" type="xsd:decimal"
+																	minOccurs="0" />
+																<xsd:element name="VendorHeight" type="xsd:decimal"
+																	minOccurs="0" />
+																<xsd:element name="Price" type="xsd:decimal"
+																	minOccurs="0" />
+																<xsd:element ref="ProcessImmdNeeds"
+																	minOccurs="1" />
+																<xsd:element ref="ManufacturingPlant"
+																	minOccurs="0" />
+																<xsd:element ref="ManufacturingDate"
+																	minOccurs="0" />
+																<xsd:element ref="QcHoldUponReceipt"
+																	minOccurs="0" />
+																<xsd:element ref="Reference1" minOccurs="0" />
+																<xsd:element ref="Reference2" minOccurs="0" />
+																<xsd:element ref="Reference3" minOccurs="0" />
+																<xsd:element name="ActionCode" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element ref="ShipmentPriority"
+																	minOccurs="0" />
+																<xsd:element ref="PathNbr" minOccurs="0" />
+																<xsd:element name="Weight" type="xsd:decimal"
+																	minOccurs="0" />
+																<xsd:element ref="POLineNbr" minOccurs="0" />
+																<xsd:element ref="StatusCode" minOccurs="1" />
+																<xsd:element name="MiscInsCode1" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="MiscInsCode2" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element ref="Misc20ByteField1"
+																	minOccurs="0" />
+																<xsd:element ref="Misc20ByteField2"
+																	minOccurs="0" />
+																<xsd:element ref="MiscNumericField1"
+																	minOccurs="0" />
+																<xsd:element ref="MiscNumericField2"
+																	minOccurs="0" />
+																<xsd:element ref="RecordExpansionField"
+																	minOccurs="0" />
+																<xsd:element ref="CustomRecExpansionField"
+																	minOccurs="0" />
+																<xsd:element ref="VendorASN" minOccurs="0" />
+																<xsd:element ref="TicketType" minOccurs="0" />
+																<xsd:element ref="StandardSubPackQty"
+																	minOccurs="0" />
+																<xsd:element ref="StandardPackQty"
+																	minOccurs="0" />
+																<xsd:element ref="VendorItemNumber"
+																	minOccurs="0" />
+																<xsd:element ref="CutNbr" minOccurs="0" />
+																<xsd:element name="NbrofPackforCatchWt"
+																	type="xsd:integer" minOccurs="0" />
+																<xsd:element ref="PrePackGroupCode"
+																	minOccurs="0" />
+																<xsd:element ref="ShipByDate" minOccurs="0" />
+																<xsd:element ref="PutawayType" minOccurs="0" />
+																<xsd:element ref="VendorID" minOccurs="1" />
+																<xsd:element ref="ExpireDate" minOccurs="1" />
+																<xsd:element name="TotalUnloadTime" type="xsd:integer"
+																	minOccurs="0" />
+																<xsd:element ref="Function" minOccurs="0" />
+																<xsd:element ref="InnerPackQty" minOccurs="0" />
+																<xsd:element name="IncubationDate" type="xsd:dateTime"
+																	minOccurs="0" />
+																<xsd:element name="SplInstrCode1" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="SplInstrCode2" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="SplInstrCode3" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="SplInstrCode4" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="Misc20ByteField3" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="Misc20ByteField4" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element ref="MiscNumericField3"
+																	minOccurs="0" />
+																<xsd:element ref="MiscNumericField4"
+																	minOccurs="0" />
+																<xsd:element name="ConvToPreOwnSKU" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element ref="ConditionCode" minOccurs="0" />
+																<xsd:element name="LpnPerTier" type="xsd:integer"
+																	minOccurs="0" />
+																<xsd:element name="TierPerPallet" type="xsd:integer"
+																	minOccurs="0" />
+																<xsd:element name="EPCReqOnAllCases" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="TotalCatchWeight" type="xsd:decimal"
+																	minOccurs="0" />
+																<xsd:element name="PriceTicketAvail" type="xsd:integer"
+																	minOccurs="0" />
+																<xsd:element name="RetailPrice" type="xsd:decimal"
+																	minOccurs="0" />
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="ListOfASNCases" minOccurs="0">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="ASNCase" minOccurs="0"
+											maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="CaseNbr" minOccurs="1">
+																			<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="20"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>
+													<xsd:element name="LocnDefinition" minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="Area" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="Zone" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="Aisle" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="Bay" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="Level" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="Position" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="LocationID" type="xsd:string"
+																	minOccurs="0" />
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element ref="Error" minOccurs="0" />
+													<xsd:element name="ASNCaseHeaderFields"
+														minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element ref="Warehouse" minOccurs="1" />
+																<xsd:element ref="Company" minOccurs="1" />
+																<xsd:element ref="Division" minOccurs="1" />
+																<xsd:element ref="PONbr" minOccurs="1" />
+																<xsd:element name="ReceivedShipmentNbr"
+																	type="xsd:string" minOccurs="0" />
+																<xsd:element name="OriginalShipmentNbr" minOccurs="1">
+																						<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="20"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>
+																<xsd:element ref="DcOrderNbr" minOccurs="0" />
+																<xsd:element ref="WorkOrderNbr" minOccurs="0" />
+																<xsd:element ref="ManufacturingPlant"
+																	minOccurs="0" />
+																<xsd:element ref="ConsumeCasePriority"
+																	minOccurs="0" />
+																<xsd:element ref="ConsumePriorityDate"
+																	minOccurs="0" />
+																<xsd:element ref="ManufacturingDate"
+																	minOccurs="1" />
+																<xsd:element ref="ExpireDate" minOccurs="1" />
+																<xsd:element ref="ProcessImmdNeeds"
+																	minOccurs="1" />
+																<xsd:element ref="Volume" minOccurs="0" />
+																<xsd:element ref="EstimatedWeight"
+																	minOccurs="0" />
+																<xsd:element ref="ActualWeight" minOccurs="0" />
+																<xsd:element ref="CaseType" minOccurs="0" />
+																<xsd:element ref="CaseSize" minOccurs="0" />
+																<xsd:element ref="ManifestNbr" minOccurs="0" />
+																<xsd:element ref="ManifestType" minOccurs="0" />
+																<xsd:element ref="ShipVia" minOccurs="0" />
+																<xsd:element ref="TrailerNumber" minOccurs="0" />
+																<xsd:element ref="WhseTransferFlag"
+																	minOccurs="0" />
+																<xsd:element ref="StatusCode" minOccurs="1" />
+																<xsd:element ref="StatusDateTime" minOccurs="0" />
+																<xsd:element ref="ReceivedFrom" minOccurs="0" />
+																<xsd:element ref="ReceivedDate" minOccurs="0" />
+																<xsd:element ref="PreviousArea" minOccurs="0" />
+																<xsd:element ref="PreviousZone" minOccurs="0" />
+																<xsd:element ref="PreviousAisle" minOccurs="0" />
+																<xsd:element ref="PreviousBay" minOccurs="0" />
+																<xsd:element ref="PreviousLevel" minOccurs="0" />
+																<xsd:element ref="PreviousPosition"
+																	minOccurs="0" />
+																<xsd:element ref="LocnCaseIndicator"
+																	minOccurs="0" />
+																<xsd:element ref="PalletID" minOccurs="0" />
+																<xsd:element name="SingleSkuCase" minOccurs="1">
+																						<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>
+																<xsd:element ref="ReworkCode" minOccurs="0" />
+																<xsd:element ref="QualityHeldCode"
+																	minOccurs="0" />
+																<xsd:element ref="SpecialInstrCode1"
+																	minOccurs="0" />
+																<xsd:element ref="SpecialInstrCode2"
+																	minOccurs="0" />
+																<xsd:element ref="SpecialInstrCode3"
+																	minOccurs="0" />
+																<xsd:element ref="SpecialInstrCode4"
+																	minOccurs="0" />
+																<xsd:element ref="SpecialInstrCode5"
+																	minOccurs="0" />
+																<xsd:element ref="ReasonCode" minOccurs="0" />
+																<xsd:element ref="CaseLabelType" minOccurs="0" />
+																<xsd:element ref="PutawayType" minOccurs="0" />
+																<xsd:element ref="VendorID" minOccurs="1" />
+																<xsd:element name="OutofZoneIndicator" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="PhysicalEntityCode" minOccurs="1" >
+																						<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>
+																<xsd:element name="VendorContainerNbr" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element ref="ShipByDate" minOccurs="0" />
+																<xsd:element name="DateCreated" type="xsd:dateTime"
+																	minOccurs="0" />
+																<xsd:element ref="MiscAlphaField3"
+																	minOccurs="0" />
+																<xsd:element ref="MiscAlphaField4"
+																	minOccurs="0" />
+																<xsd:element name="ConsumeSeq" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="IncubationDate" type="xsd:dateTime"
+																	minOccurs="0" />
+																<xsd:element name="CaseHeight" type="xsd:decimal"
+																	minOccurs="0" />
+																<xsd:element name="CaseLength" type="xsd:decimal"
+																	minOccurs="0" />
+																<xsd:element name="CaseWidth" type="xsd:decimal"
+																	minOccurs="0" />
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="EPCData" minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="CaseEPC" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="PalletEPC" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="PalletEPCKillCode" type="xsd:string"
+																	minOccurs="0" />
+																<xsd:element name="CaseEPCKillCode" type="xsd:string"
+																	minOccurs="0" />
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="InvoiceNbr" type="xsd:string"
+														minOccurs="0" />
+													<xsd:element name="ListOfASNCaseDetails">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="ASNCaseDetail" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="SkuSequenceNbr" minOccurs="1">	
+																										<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="5"/>
+						</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:element>																		
+																			<xsd:element ref="SKUDefinition"
+																				minOccurs="0" />																			
+																			<xsd:element name="ShippedAsnQuantity"
+																				type="xsd:decimal" minOccurs="1" />
+																			<xsd:element ref="SubSKUFields"
+																				minOccurs="0" />
+																			<xsd:element ref="Error" minOccurs="0" />
+																			<xsd:element name="ASNCaseDetailFields"
+																				minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="OriginalQuantity"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element name="Quantity" type="xsd:decimal"
+																							minOccurs="0" />
+																						<xsd:element ref="StdCaseQuantity"
+																							minOccurs="0" />
+																						<xsd:element name="ColorShade" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element name="PackageType" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element name="Conveyable" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element name="DataSheetVersion"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element ref="ManufacturingPlant"
+																							minOccurs="0" />
+																						<xsd:element ref="CutNbr" minOccurs="0" />
+																						<xsd:element name="ReceiveFlag" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element name="StdCostPerUnit"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element name="AddOnCostPerUnit"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element name="CurrentCostPerUnit"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element name="SellingPricePerUnit"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element name="CurrentInvValue"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element ref="PrePackGroupCode"
+																							minOccurs="0" />
+																						<xsd:element ref="AssortmentNbr"
+																							minOccurs="0" />
+																						<xsd:element ref="InnerPackQty"
+																							minOccurs="0" />
+																						<xsd:element name="PalletSizeType"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element ref="ShipmentNbr" />
+																						<xsd:element ref="POLineNbr"
+																							minOccurs="0" />
+																						<xsd:element ref="StatusCode"
+																							minOccurs="0" />
+																						<xsd:element name="LocationType" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element name="PutawayZone" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element ref="LocnCaseIndicator"
+																							minOccurs="0" />
+																						<xsd:element name="LocnSequencingCode"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="PalletType" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element name="InventoryLockCode1"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="InventoryLockCode2"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="InventoryLockCode3"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="InventoryLockCode4"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="InventoryLockCode5"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element ref="MiscNumericField1"
+																							minOccurs="0" />
+																						<xsd:element ref="MiscNumericField2"
+																							minOccurs="0" />
+																						<xsd:element ref="MiscNumericField3"
+																							minOccurs="0" />
+																						<xsd:element ref="SpecialInstrCode1"
+																							minOccurs="0" />
+																						<xsd:element ref="SpecialInstrCode2"
+																							minOccurs="0" />
+																						<xsd:element ref="SpecialInstrCode3"
+																							minOccurs="0" />
+																						<xsd:element ref="SpecialInstrCode4"
+																							minOccurs="0" />
+																						<xsd:element ref="SpecialInstrCode5"
+																							minOccurs="0" />
+																						<xsd:element ref="CaseDivertCode"
+																							minOccurs="0" />
+																						<xsd:element ref="PathNbr" minOccurs="0" />
+																						<xsd:element name="KeyrecRecordNbr"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="ShipmentCtlFlag"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="AuditFlag" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element name="PixReference1"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="PixReference2"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="PixReference3"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element ref="RecordExpansionField"
+																							minOccurs="0" />
+																						<xsd:element ref="CustomRecExpansionField"
+																							minOccurs="0" />
+																						<xsd:element ref="VendorASN"
+																							minOccurs="0" />
+																						<xsd:element ref="TicketType"
+																							minOccurs="0" />
+																						<xsd:element name="StoreNbr" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element name="DistroNbr" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element ref="Function" minOccurs="0" />
+																						<xsd:element ref="StandardPackQty"
+																							minOccurs="0" />
+																						<xsd:element ref="StandardSubPackQty"
+																							minOccurs="0" />
+																						<xsd:element ref="VendorItemNumber"
+																							minOccurs="0" />
+																						<xsd:element name="InnerPackLength"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element name="InnerPackWidth"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element name="InnerPackHeight"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element name="InnerPackWeight"
+																							type="xsd:decimal" minOccurs="0" />
+																						<xsd:element name="PalletHeight" type="xsd:decimal"
+																							minOccurs="0" />
+																						<xsd:element name="PalletLength" type="xsd:decimal"
+																							minOccurs="0" />
+																						<xsd:element name="PalletWidth" type="xsd:decimal"
+																							minOccurs="0" />
+																						<xsd:element name="UnitHeight" type="xsd:decimal"
+																							minOccurs="0" />
+																						<xsd:element name="UnitLength" type="xsd:decimal"
+																							minOccurs="0" />
+																						<xsd:element name="UnitWidth" type="xsd:decimal"
+																							minOccurs="0" />
+																						<xsd:element name="UnitWeight" type="xsd:decimal"
+																							minOccurs="0" />
+																						<xsd:element ref="ConditionCode"
+																							minOccurs="0" />
+																						<xsd:element ref="AssortmentNbr"
+																							minOccurs="0" />
+																						<xsd:element name="PriceTicketAvail"
+																							type="xsd:integer" minOccurs="0" />
+																						<xsd:element name="RetailPrice" type="xsd:decimal"
+																							minOccurs="0" />
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element name="ListOfSerialNbrRecords"
+														minOccurs="0">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="SerialNbrRecord"
+																	maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<!--xsd:element ref="PktCtlNbr" type="xsd:string"/ -->
+																			<xsd:element name="SerialNbr" type="xsd:string"
+																				minOccurs="0" maxOccurs="unbounded" />
+																			<xsd:element name="PackageBarcode" type="xsd:string" />
+																			<xsd:element name="CartonLineNbr" type="xsd:integer" />
+																			<xsd:element name="SerialNbrRecordFields"
+																				minOccurs="0">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element ref="ActualWeight"
+																							minOccurs="0" />
+																						<xsd:element name="Boxes" type="xsd:integer"
+																							minOccurs="0" />
+																						<xsd:element name="CaseNbr" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element ref="CustomRecExpansionField"
+																							minOccurs="0" />
+																						<xsd:element name="DateCreated" type="xsd:dateTime"
+																							minOccurs="0" />
+																						<xsd:element ref="Function" minOccurs="0" />
+																						<xsd:element ref="Misc20ByteField1"
+																							minOccurs="0" />
+																						<xsd:element ref="Misc20ByteField2"
+																							minOccurs="0" />
+																						<xsd:element name="Misc20ByteField3"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element name="Misc20ByteField4"
+																							type="xsd:string" minOccurs="0" />
+																						<xsd:element ref="MiscNumericField1"
+																							minOccurs="0" />
+																						<xsd:element name="OrderNbr" type="xsd:string"
+																							minOccurs="0" />
+																						<!--xsd:element name="PktLineNbr" minOccurs="0" type="xsd:string" 
+																							fixed="1"/ -->
+																						<xsd:element ref="RecordExpansionField"
+																							minOccurs="0" />
+																						<xsd:element name="RecordType" type="xsd:string"
+																							minOccurs="0" />
+																						<xsd:element ref="StatusCode"
+																							minOccurs="0" />
+																						<xsd:element name="Units" type="xsd:integer"
+																							fixed="1" minOccurs="0" />
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:string" use="optional" />
+			<xsd:attribute name="version" type="xsd:string" use="optional"
+				default="2.3.1" />
+			<xsd:attribute name="timestamp" type="xsd:dateTime"
+				use="optional" />
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

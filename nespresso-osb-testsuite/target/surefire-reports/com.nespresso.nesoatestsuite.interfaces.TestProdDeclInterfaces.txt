@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.nespresso.nesoatestsuite.interfaces.TestProdDeclInterfaces
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 91.603 sec

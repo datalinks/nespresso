@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Jean Vieille (Jean Vieille) -->
+<xsd:schema targetNamespace="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:include schemaLocation="B2MML-V02-TransferPerformance_Globe-V01_Schema.xsd"/>
+	<xsd:annotation>
+		<xsd:documentation> 
+		27/11/2003 - Jean Vieille
+		Nestlé : Schema created from ProductionSchedule shema and modified for Globe middleware / SAP interface
+		added globe extensions
+		</xsd:documentation>
+		<xsd:documentation> 
+        Copyright 2002 The World Batch Forum. All Rights Reserved. http://www.wbf.org
+
+        This World Batch Forum Work (including specifications, documents, 
+        software, and related items) referred to as the Business To 
+        Manufacturing Markup Language (B2MML) is provided by the copyright 
+        holders under the following license. 
+
+        Permission to use, copy, modify, or redistribute this Work and its 
+        documentation, with or without modification, for any purpose and 
+        without fee or royalty is hereby granted provided the World Batch 
+        Forum is acknowledged as the originator of this Work using the 
+        following statement:
+
+        "The Business To Manufacturing Markup Language (B2MML) is used 
+        courtesy of the World Batch Forum."
+
+        In no event shall the World Batch Forum, its members, or any 
+        third party be liable for any costs, expenses, losses, damages or 
+        injuries incurred by use of the Work or as a result of this 
+        agreement.
+      
+        Based upon the ANSI/ISA-95.00.02-2001 Enterprise-Control System 
+        Integration Part 2: Object Model Attributes Standard
+     </xsd:documentation>
+		<xsd:documentation> 
+  
+      Revision History
+
+	Ver	Date		Person		Note
+        ---     ----            ------          ----
+        V01     7 Apr 2002      D. Emerson      Initial release  
+        V02     23 Sept 2003     D. Emerson      Updated filename for V02
+					        Fixed the missing unbounded on the description
+						in MaterialConsumedRequirementType
+						Added RequiredByRequestedSegmentResponse to 
+						SegmentRequirementType and sub elements
+						Changed ##any to "Any" element of type "AnyType"
+                                                Removed include of Common schema since it is
+                                                included when ProductionPerformance schema is
+                                                included.  TurobXML was giving errors on doubly
+                                                defined types.
+                                                Added revision to namespace
+   </xsd:documentation>
+	</xsd:annotation>
+	<!-- Global Elements -->
+	<xsd:element name="TransferSchedule" type="TransferScheduleType"/>
+	<xsd:element name="TransferRequest" type="TransferRequestType"/>
+	<!-- Simple & Complex Types  -->
+	<xsd:complexType name="TransferScheduleType">
+		<xsd:sequence>
+			<xsd:element name="ID" type="IDType" minOccurs="1"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Location" type="LocationType" minOccurs="1"/>
+			<xsd:element name="PublishedDate" type="PublishedDateType" minOccurs="1"/>
+			<xsd:element name="StartTime" type="StartTimeType" minOccurs="0"/>
+			<xsd:element name="EndTime" type="EndTimeType" minOccurs="0"/>
+			<xsd:element name="EquipmentElementLevel" type="EquipmentElementLevelType" minOccurs="0"/>
+			<xsd:element name="TransferRequest" type="TransferRequestType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TransferRequestType">
+		<xsd:sequence>
+			<xsd:element name="ID" type="IDType" minOccurs="1"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ProductProductionRuleID" type="ProductProductionRuleIDType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="StartTime" type="StartTimeType" minOccurs="0"/>
+			<xsd:element name="EndTime" type="EndTimeType" minOccurs="0"/>
+			<xsd:element name="Priority" type="PriorityType" minOccurs="0"/>
+			<xsd:element name="SegmentRequirement" type="SegmentRequirementType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="SegmentResponse" type="SegmentResponseType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="globe_Action" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_RequirementType" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_RequirementTrackingNumber" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_StatusChange" type="xsd:string" minOccurs="0"/>
+			<!-- Begin Globe extension  -->
+			<!-- End Globe extension  -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SegmentRequirementType">
+		<xsd:sequence>
+			<xsd:element name="ID" type="IDType" minOccurs="1"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="ProductSegmentID" type="ProductSegmentIDType"/>
+				<xsd:element name="ProcessSegmentID" type="ProcessSegmentIDType"/>
+			</xsd:choice>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="EarliestStartTime" type="EarliestStartTimeType" minOccurs="0"/>
+			<xsd:element name="LatestEndTime" type="LatestEndTimeType" minOccurs="0"/>
+			<xsd:element name="Duration" type="DurationType" minOccurs="0"/>
+			<xsd:element name="TransferParameter" type="TransferParameterType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="PersonnelRequirement" type="PersonnelRequirementType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="EquipmentRequirement" type="EquipmentRequirementType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="MaterialProducedRequirement" type="MaterialProducedRequirementType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="MaterialConsumedRequirement" type="MaterialConsumedRequirementType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ConsumableExpectedRequirement" type="ConsumableExpectedRequirementType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="SegmentRequirement" type="SegmentRequirementType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="RequiredByRequestedSegmentResponse" type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="globe_ConfirmationCompleted" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_RequirementCancelled" type="xsd:string" minOccurs="0"/>
+			<!-- End Globe extension  -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TransferParameterType">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="ProductSegmentID" type="ProductSegmentIDType"/>
+				<xsd:element name="ProcessSegmentID" type="ProcessSegmentIDType"/>
+			</xsd:choice>
+			<xsd:element name="Parameter" type="ParameterType" minOccurs="0"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PersonnelRequirementType">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="PersonnelClassID" type="PersonnelClassIDType"/>
+				<xsd:element name="PersonID" type="PersonIDType"/>
+			</xsd:choice>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Location" type="LocationType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="PersonnelRequirementProperty" type="PersonnelRequirementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="RequiredByRequestedSegmentResponse" type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PersonnelRequirementPropertyType">
+		<xsd:sequence>
+			<xsd:element name="ID" type="IDType"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Value" type="ValueType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EquipmentRequirementType">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="EquipmentClassID" type="EquipmentClassIDType"/>
+				<xsd:element name="EquipmentID" type="EquipmentIDType"/>
+			</xsd:choice>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Location" type="LocationType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="EquipmentRequirementProperty" type="EquipmentRequirementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="RequiredByRequestedSegmentResponse" type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="EquipmentRequirementPropertyType">
+		<xsd:sequence>
+			<xsd:element name="ID" type="IDType"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Value" type="ValueType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MaterialProducedRequirementType">
+		<xsd:sequence>
+			<xsd:element name="MaterialClassID" type="MaterialClassIDType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="MaterialDefinitionID" type="MaterialDefinitionIDType" minOccurs="1"/>
+			<xsd:element name="MaterialLotID" type="MaterialLotIDType" minOccurs="1"/>
+			<xsd:element name="MaterialSubLotID" type="MaterialSubLotIDType" minOccurs="1"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Location" type="LocationType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="MaterialProducedRequirementProperty" type="MaterialProducedRequirementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="RequiredByRequestedSegmentResponse" type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="globe_StockType" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_ConsignmentInd" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_Vendor" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_StorageUnitType" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_ExpirationDate" type="xsd:dateTime" minOccurs="0"/>
+			<xsd:element name="globe_VendorBatch" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_ProductionDate" type="xsd:dateTime" minOccurs="0"/>
+			<xsd:element name="globe_BatchRestrictedStatus" type="xsd:string" minOccurs="0"/>
+			<!-- End Globe extension  -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MaterialProducedRequirementPropertyType">
+		<xsd:sequence>
+			<xsd:element name="ID" type="IDType" minOccurs="0"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Value" type="ValueType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MaterialConsumedRequirementType">
+		<xsd:sequence>
+			<xsd:element name="MaterialClassID" type="MaterialClassIDType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="MaterialDefinitionID" type="MaterialDefinitionIDType" minOccurs="1"/>
+			<xsd:element name="MaterialLotID" type="MaterialLotIDType" minOccurs="1"/>
+			<xsd:element name="MaterialSubLotID" type="MaterialSubLotIDType" minOccurs="1"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Location" type="LocationType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="MaterialConsumedRequirementProperty" type="MaterialConsumedRequirementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="RequiredByRequestedSegmentResponse" type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="globe_StockType" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_ConsignmentInd" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_Vendor" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_StorageUnitType" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_ExpirationDate" type="xsd:dateTime" minOccurs="0"/>
+			<xsd:element name="globe_VendorBatch" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="globe_ProductionDate" type="xsd:dateTime" minOccurs="0"/>
+			<xsd:element name="globe_BatchRestrictedStatus" type="xsd:string" minOccurs="0"/>
+			<!-- End Globe extension  -->
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MaterialConsumedRequirementPropertyType">
+		<xsd:sequence>
+			<xsd:element name="ID" type="IDType" minOccurs="0"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Value" type="ValueType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ConsumableExpectedRequirementType">
+		<xsd:sequence>
+			<xsd:element name="MaterialClassID" type="MaterialClassIDType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="MaterialDefinitionID" type="MaterialDefinitionIDType" minOccurs="0"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Location" type="LocationType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ConsumableExpectedRequirementProperty" type="ConsumableExpectedRequirementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="RequiredByRequestedSegmentResponse" type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ConsumableExpectedRequirementPropertyType">
+		<xsd:sequence>
+			<xsd:element name="ID" type="IDType" minOccurs="0"/>
+			<xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Value" type="ValueType" minOccurs="0"/>
+			<xsd:element name="Quantity" type="QuantityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Any" type="AnyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

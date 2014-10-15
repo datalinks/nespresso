@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="CrossReferenceBridge">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CrossRef" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Company" type="xs:string" minOccurs="0"/>
+							<xs:element name="Division" type="xs:string" minOccurs="0"/>
+							<xs:element name="VendorBarcode">
+							
+<xs:simpleType>
+															<xs:restriction base="xs:string">
+														      <xs:maxLength value="20"/>
+														    </xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+							<xs:element name="BatchCtlNbr" type="xs:string" minOccurs="0"/>
+							<xs:element name="Error" type="xs:string" minOccurs="0"/>
+							<xs:element name="CrossReferenceFields" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DateCreated" type="xs:dateTime" minOccurs="0"/>
+										<xs:element name="PackageBarcode" minOccurs="0">
+										
+<xs:simpleType>
+															<xs:restriction base="xs:string">
+														      <xs:maxLength value="20"/>
+														    </xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+										<xs:element name="ScanQty" type="xs:decimal" minOccurs="0"/>
+										<xs:element name="Function" type="xs:string" minOccurs="0"/>
+										<xs:element name="CustomRecordExpansionField" type="xs:string" minOccurs="0"/>
+										<xs:element name="MiscIns20Byte1" type="xs:string" minOccurs="0"/>
+										<xs:element name="MiscIns20Byte2" type="xs:string" minOccurs="0"/>
+										<xs:element name="MiscNum1" type="xs:decimal" minOccurs="0"/>
+										<xs:element name="MiscNum2" type="xs:decimal" minOccurs="0"/>
+										<xs:element name="RecordExpansionField" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="StatusCode" type="xs:integer" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:string" use="optional"/>
+			<xs:attribute name="version" type="xs:string" use="optional" default="2.3.1"/>
+			<xs:attribute name="timestamp" type="xs:dateTime" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

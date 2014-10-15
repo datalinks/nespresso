@@ -1,0 +1,36 @@
+<PIXBridge timestamp="2003-04-09T15:27:00" version="2.3">
+	<PIX>
+		<TransactionType>601</TransactionType>
+		<TransactionCode>001</TransactionCode>
+		<TransactionNumber>340883</TransactionNumber>
+		<SequenceNumber>1</SequenceNumber>
+		<SKUDefinition>
+		</SKUDefinition>
+		<SubSKUFields>
+		</SubSKUFields>
+		<Error/>
+		<PIXFields>
+			<DateCreated>2008-12-19T14:21:18</DateCreated>
+			<ReferenceCode1>01</ReferenceCode1>
+			<Reference1>M3004545974</Reference1>
+			<ReferenceCode2>94</ReferenceCode2>
+			<Reference2>99</Reference2>
+			<ReferenceCode3>114</ReferenceCode3>
+			<Reference3/>
+			<ReferenceCode4/>
+			<Reference4/>
+			<ReferenceCode5/>
+			<Reference5/>
+			<ReferenceCode6/>
+			<Reference6/>
+			<ReferenceCode7/>
+			<Reference7/>
+			<ReferenceCode8/>
+			<Reference8/>
+			<ReferenceCode9/>
+			<Reference9/>
+			<ReferenceCode10/>
+			<Reference10/>
+		</PIXFields>
+	</PIX>
+</PIXBridge>

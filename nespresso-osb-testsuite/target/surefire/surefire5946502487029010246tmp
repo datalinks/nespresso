@@ -1,0 +1,36 @@
+#surefire
+#Wed Feb 22 18:10:45 CET 2012
+testClassesDirectory=C\:\\wipro\\workspaces\\praveen\\NesOATestSuite\\target\\test-classes
+classPathUrl.4=C\:\\praveen\\Maven\\org\\apache\\httpcomponents\\httpclient\\4.1.2\\httpclient-4.1.2.jar
+classPathUrl.3=C\:\\praveen\\Maven\\junit\\junit\\4.7\\junit-4.7.jar
+classPathUrl.2=C\:\\praveen\\Maven\\xmlunit\\xmlunit\\1.3\\xmlunit-1.3.jar
+useManifestOnlyJar=true
+classPathUrl.1=C\:\\wipro\\workspaces\\praveen\\NesOATestSuite\\target\\classes
+reportsDirectory=C\:\\wipro\\workspaces\\praveen\\NesOATestSuite\\target\\surefire-reports
+classPathUrl.0=C\:\\wipro\\workspaces\\praveen\\NesOATestSuite\\target\\test-classes
+dirscanner.0=directoryScannerOptions
+providerConfiguration=org.apache.maven.surefire.junit4.JUnit4Provider
+testSuiteDefinitionTestSourceDirectory=C\:\\wipro\\workspaces\\praveen\\NesOATestSuite\\src\\test\\java
+surefireClassPathUrl.1=C\:\\praveen\\Maven\\org\\apache\\maven\\surefire\\surefire-api\\2.7.2\\surefire-api-2.7.2.jar
+surefireClassPathUrl.0=C\:\\praveen\\Maven\\org\\apache\\maven\\surefire\\surefire-junit4\\2.7.2\\surefire-junit4-2.7.2.jar
+runOrder=filesystem
+report.2=org.apache.maven.surefire.report.XMLReporter
+useSystemClassLoader=true
+report.1=org.apache.maven.surefire.report.BriefFileReporter
+report.0=org.apache.maven.surefire.report.ForkingConsoleReporter
+excludes0=**/*$*
+isTrimStackTrace=true
+dirscanner.0.params=C\:\\wipro\\workspaces\\praveen\\NesOATestSuite\\target\\test-classes|[**/Test*.java, **/*Test.java, **/*TestCase.java]|[**/*$*]
+includes2=**/*TestCase.java
+enableAssertions=true
+includes1=**/*Test.java
+failIfNoTests=false
+includes0=**/Test*.java
+dirscanner.0.types=java.io.File|java.util.ArrayList|java.util.ArrayList
+classPathUrl.10=C\:\\praveen\\Maven\\xmlbeans\\xmlbeans\\1.0\\xmlbeans-1.0.jar
+classPathUrl.9=C\:\\praveen\\Maven\\log4j\\log4j\\1.2.16\\log4j-1.2.16.jar
+classPathUrl.8=C\:\\praveen\\Maven\\org\\apache\\commons\\commons-net\\3.0.1\\commons-net-3.0.1.jar
+classPathUrl.7=C\:\\praveen\\Maven\\commons-codec\\commons-codec\\1.4\\commons-codec-1.4.jar
+childDelegation=false
+classPathUrl.6=C\:\\praveen\\Maven\\commons-logging\\commons-logging\\1.1.1\\commons-logging-1.1.1.jar
+classPathUrl.5=C\:\\praveen\\Maven\\org\\apache\\httpcomponents\\httpcore\\4.1.2\\httpcore-4.1.2.jar
